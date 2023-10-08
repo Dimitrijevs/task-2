@@ -214,12 +214,6 @@ select {
   transform: translate(-50%, -50%);
 }
 
-@media (max-width: 700px){
-  .video {
-    margin-top: 50px;
-  }
-}
-
 @media (max-width: 800px) {
   .video {
     margin-top: 72px;
@@ -230,7 +224,17 @@ select {
   }
 }
 
+@media (max-width: 700px){
+  .video {
+    margin-top: 50px;
+  }
+}
+
 @media (max-width: 500px) {
+  .video {
+    margin-top: 48px;
+  }
+
   .vector {
     height: 70px;
   }
@@ -308,23 +312,7 @@ select {
   height: 50%;
 }
 
-/* @media (max-width: 1500px) {
-  .photo-container > .photos-wrapper {
-    height: 42vh;
-  }
-}
-
-@media (max-width: 1200px) {
-  .photo-container > .photos-wrapper {
-    height: 36vh;
-  }
-} */
-
 @media (max-width: 700px) {
-  .photo-container > .photos-wrapper {
-    height: 34vh;
-  }
-
   .photo-container > .photos-wrapper > .photos-2,
   .photo-container > .photos-wrapper > img {
     width: 50%;
@@ -343,17 +331,28 @@ select {
 
 .two-buttons {
   margin-top: 120px;
+  display: flex;
+  width: 90%;
+  margin: 120px auto 0;
 }
 
 .two-buttons > .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 70%;
-  grid-column-gap: 60px;
   margin: 0 auto;
+  width: 40%;
   text-align: center;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
+
+/* Style the button to be at the bottom */
+
+.two-buttons > .container h3 {
+  height: 6vh;
+}
+
 
 .two-buttons > .container > h3 {
   margin-bottom: 4%;
@@ -374,7 +373,7 @@ select {
   .two-buttons > .container > h3 {
     margin-bottom: 20px;
     font-size: var(--font-18);
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 }
 
@@ -432,7 +431,7 @@ select {
   font-size: var(--font-30);
   text-align: center;
   color: var(--dark-blue);
-  margin: 150px 0 60px;
+  margin: 144px 0 60px;
   font-weight: 500;
   font-family: 'Oswald', sans-serif;
   letter-spacing: -1px;
@@ -460,7 +459,7 @@ select {
 
 @media (max-width: 800px) {
   .sazinaties-ar-mums > h3 {
-    margin: 136px 0 50px;
+    margin: 146px 0 50px;
   }
 
   .sazinaties-ar-mums > form > .input-form {
@@ -741,7 +740,6 @@ footer > .bottom {
 
   footer > .bottom > .left, footer > .bottom > p {
     display: flex;
-    margin: 30px 0 0;
     font-size: calc(var(--font-14) + 2px);
   }
 }
