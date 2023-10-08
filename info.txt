@@ -1,0 +1,28 @@
+browser-sync start --server --files "css/*.css"
+
+https://browsersync.io/#install
+
+figma
+
+postCSS
+SASS
+
+ESLint
+browserify - javascript
+
+download wordpress
+add W3 Total cache
+
+CSS media queries
+
+JPEG for photographs and PNG for graphic
+
+srcset
+
+pixel perfect
+
+Minifier
+
+CSS preprocessor
+
+Gzip
