@@ -79,7 +79,6 @@ select {
 
 
 /* Nav bar css */
-
 .nav-bar {
   width: 100%;
   position: absolute;
@@ -220,7 +219,6 @@ select {
 
 
 /* Ripped lines css */
-
 .ripped {
   position: absolute;
   margin-top: -4px;
@@ -252,7 +250,6 @@ select {
 
 
 /* Video and button */
-
 .video {
   position: relative;
   margin-top: 48px;
@@ -298,7 +295,6 @@ select {
 
 
 /* Text contianer */
-
 .text-wrapper {
   height: 44vh;
   display: flex;
@@ -336,7 +332,6 @@ select {
 
 
 /* Photos css */
-
 .photo-container {
   position: relative;
 }
@@ -348,19 +343,19 @@ select {
   justify-content: center;
   height: auto;
   transition: ease all 0.4s;
-  flex-wrap: wrap; /* Add flex-wrap for responsiveness */
+  flex-wrap: wrap;
 }
 
 .photo-container > .photos-wrapper > img {
   width: 25%;
-  flex: 0 0 25%; /* Adjust flex properties */
+  flex: 0 0 25%;
 }
 
 .photo-container > .photos-wrapper > .photos-2 {
   display: flex;
   flex-wrap: wrap;
   width: 25%;
-  flex: 0 0 25%; /* Adjust flex properties */
+  flex: 0 0 25%;
 }
 
 .photo-container > .photos-wrapper > .photos-2 > * {
@@ -383,7 +378,6 @@ select {
 
 
 /* Two buttons and h3 */
-
 .two-buttons {
   margin-top: 120px;
   display: flex;
@@ -425,7 +419,6 @@ select {
     font-size: var(--font-18);
   }
 }
-
 
 @media (max-width: 700px) {
   .two-buttons {
@@ -485,7 +478,6 @@ select {
 
 
 /* Form container */
-
 .sazinaties-ar-mums > h3 {
   font-size: var(--font-30);
   text-align: center;
@@ -672,7 +664,6 @@ select {
 
 
 /* Atbalstītāju css */
-
 .atbalstitaji {
   height: 50vh;
   background-color: var(--yellow);
@@ -742,12 +733,17 @@ select {
   }
 
   .atbalstitaji > .img-container > #last-child-atb {
-    height: 60px;
+    height: 110px;
     width: 20%;
     margin: 0 auto;
   }
 }
 
+@media (max-width: 500px) {
+  .atbalstitaji > .img-container > #last-child-atb {
+    height: 70px;
+  }
+}
 
 .ripped-footer {
   width: 100%;
@@ -765,7 +761,6 @@ select {
 
 
 /* Footer css */
-
 footer {
   background-color: var(--dark-blue);
   color: #FFF;
@@ -810,7 +805,6 @@ footer > .main-content > .right > .img-container {
   margin: 15% 0;
 }
 
-
 footer > .main-content > .right > .img-container > img {
   height: 34px;
 }
@@ -852,10 +846,12 @@ footer > .bottom {
     display: block;
     padding: 40px 40px 20px;
     height: 33vh;
+
   }
 
   footer > .main-content {
     padding-top: 0;
+    width: 90%;
   }
 
   footer > .main-content > .right > .img-container > img{
@@ -893,22 +889,22 @@ footer > .bottom {
     height: auto;
   }
 
-  footer > .main-content > .right > .img-container {
+  .small-footer > .main-content > .right > .img-container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     margin: 17% 0;
   }
 
-  footer > .main-content > .right > .img-container > img:first-child {
+  .small-footer > .main-content > .right > .img-container > img:first-child {
     padding-right: 38px;
   }
 
-  footer > .main-content {
+  .small-footer > .main-content {
     line-height: 1;
   }
 
-  footer > .main-content > .left-container > img {
+  .small-footer > .main-content > .left-container > img {
     height: 100px;
     padding: 20px 0 8px;
   }
@@ -921,7 +917,7 @@ footer > .bottom {
     font-size: var(--font-12);
   }
 
-  footer > .main-content > .right > p:first-child {
+  .small-footer > .main-content > .right > p:first-child {
     margin: 36px 0 0;
   }
 
@@ -929,7 +925,7 @@ footer > .bottom {
     font-size: var(--font-14);
   }
 
-  footer > .main-content > .right {
+  .small-footer > .main-content > .right {
     text-align: left;
   }
 

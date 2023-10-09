@@ -1,3 +1,4 @@
+// update two-buttons h3
 function updateH3Content() {
   const h3Elements = document.querySelectorAll('.container h3');
   const [firstH3, secondH3] = h3Elements;
@@ -12,6 +13,7 @@ function updateH3Content() {
   }
 }
 
+// change photo places in photo container 
 function handleResize() {
   const zandaImage = document.querySelector("#photo1");
   const sibillaImage = document.querySelector("#photo2");
@@ -45,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// side-bar menu
 document.addEventListener("DOMContentLoaded", function () {
   const menuButtonClosed = document.querySelector(".menu-closed");
   const menuButtonOpen = document.querySelector(".menu-open");
@@ -55,17 +58,21 @@ document.addEventListener("DOMContentLoaded", function () {
     navBar.classList.add("open");
     menuButtonClosed.style.display = "none";
     menuButtonOpen.style.display = "block";
-    body.classList.add("darken-background"); // Add the class to darken the background
-    body.style.overflow = "hidden"; // Prevent scrolling
+    body.classList.add("darken-background");
+    body.style.overflow = "hidden";
   });
 
   menuButtonOpen.addEventListener("click", function () {
     navBar.classList.remove("open");
     menuButtonOpen.style.display = "none";
     menuButtonClosed.style.display = "block";
-    body.classList.remove("darken-background"); // Remove the class to revert to the original background
-    body.style.overflow = "auto"; // Re-enable scrolling
+    body.classList.remove("darken-background");
+    body.style.overflow = "auto";
+  });
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 100) {
+      menuButtonClosed.style.display = "";
+    }
   });
 });
-
-
