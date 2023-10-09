@@ -15,13 +15,18 @@
       <img class="blacklogo" src="./assets/img/black-logo-3.png" alt="logo"/>
       <div class="menu">
         <ul>
+          <li id="first-child-li">
+            <a href="">LV</a>
+            <a href="">RU</a>
+            <a href="">EN</a>
+          </li>
           <li class="list-item"><a href="ideja.html">Ideja</a></li>
           <li class="list-item"><a href="piesakiSapni.html">Piesaki Sapni</a></li>
           <li class="list-item"><a href="uznemejiem.html">Uzņēmējiem</a></li>
           <li class="list-item"><a href="sapnuBanka.html">Sapņu banka</a></li>
           <li class="list-item"><a href="sapnusAtbalsta.html">Sapņus atbalsta</a></li>
           <li class="list-item"><a href="99stasti.html">99 Iedvesmas stāsti</a></li>
-          <li class="list-item">
+          <li id="last-child-li" class="list-item">
             <select name="languages" id="lang-select">
               <option value="">LV</option>
               <option value="">RU</option>
@@ -30,8 +35,11 @@
           </li>
         </ul>
       </div>
-      <button id="menu-button">
+      <button id="menu-button" class="menu-closed">
         <img src="./assets/img/menu-btn.svg" alt="Menu">
+      </button>
+      <button id="menu-button" class="menu-open">
+        <img src="./assets/img/x.svg" alt="Close">
       </button>
     </div>
     <img class="ripped" src="./assets/img/photo-container-ripped-top.svg" alt="">

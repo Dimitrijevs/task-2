@@ -44,3 +44,28 @@ document.addEventListener("DOMContentLoaded", function () {
     handleResize();
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuButtonClosed = document.querySelector(".menu-closed");
+  const menuButtonOpen = document.querySelector(".menu-open");
+  const navBar = document.querySelector(".menu");
+  const body = document.querySelector("body");
+
+  menuButtonClosed.addEventListener("click", function () {
+    navBar.classList.add("open");
+    menuButtonClosed.style.display = "none";
+    menuButtonOpen.style.display = "block";
+    body.classList.add("darken-background"); // Add the class to darken the background
+    body.style.overflow = "hidden"; // Prevent scrolling
+  });
+
+  menuButtonOpen.addEventListener("click", function () {
+    navBar.classList.remove("open");
+    menuButtonOpen.style.display = "none";
+    menuButtonClosed.style.display = "block";
+    body.classList.remove("darken-background"); // Remove the class to revert to the original background
+    body.style.overflow = "auto"; // Re-enable scrolling
+  });
+});
+
+
