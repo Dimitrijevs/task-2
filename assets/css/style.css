@@ -29,20 +29,9 @@ body {
   box-sizing: border-box;
 }
 
-.darken-background {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 * {
   font-family: 'Montserrat', sans-serif;
 }
-
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  text-overflow: '';
-}
-
 
 /* Logo css */
 
@@ -131,6 +120,7 @@ select {
   border: none;
   font-size: var(--font-18);
   padding: 0 10px;
+  background-color: #fff;
 }
 
 .nav-bar > .main-content-nav > #menu-button {
@@ -174,10 +164,10 @@ select {
 
   .nav-bar > .main-content-nav > .menu {
     position: fixed;
-    top: 8%;
+    top: 80px;
     right: -100%;
     width: 100%;
-    height: 62%;
+    height: auto;
     background-color: #fff;
     transition: right 0.3s ease-in-out;
     z-index: 10;
@@ -215,6 +205,16 @@ select {
   .nav-bar > .main-content-nav > #menu-button {
     margin: 6px 10px 0 0;
   }
+
+  .nav-bar > .main-content-nav > .menu {
+    top: 55px;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav-bar > .main-content-nav > .menu {
+    top: 50px;
+  }
 }
 
 
@@ -236,7 +236,8 @@ select {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 105%;
+  margin-top: -2px;
   z-index: 1;
 }
 
@@ -244,7 +245,8 @@ select {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 105%;
+  margin-bottom: -2px;
   z-index: 1;
 }
 
@@ -398,10 +400,16 @@ select {
 
 .two-buttons > .container > h3 {
   height: 6vh;
-  margin-bottom: 4%;
+  margin-bottom: 5%;
   color: var(--dark-blue);
   font-size: var(--font-24);
   font-style: normal;
+}
+
+@media (max-width: 920px) {
+  .two-buttons > .container > h3 {
+    height: 10vh;
+  }
 }
 
 @media (max-width: 800px) {
@@ -437,6 +445,13 @@ select {
 
   .two-buttons > .container > h3 {
     margin-bottom: 18px;
+  }
+}
+
+@media (max-height: 700px) {
+  .two-buttons > .container > h3 {
+    height: 80px;
+    margin-bottom: 10px;
   }
 }
 
@@ -497,7 +512,9 @@ select {
 
 .sazinaties-ar-mums .input-form > .one-line {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
+  overflow: hidden;
+  flex: 1;
 }
 
 .sazinaties-ar-mums .input-form > .one-line > #first-child {
@@ -590,7 +607,7 @@ select {
   font-size: var(--font-24);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1050px) {
   .sazinaties-ar-mums > h3 {
     margin: 146px 0 50px;
   }
@@ -701,12 +718,12 @@ select {
 }
 
 @media (max-width: 800px) {
-  .atbalstitaji > .img-container > img {
-    height: 47px;
-  }
-
   .atbalstitaji {
     height: 34vh;
+  }
+
+  .atbalstitaji > .img-container > img {
+    height: 47px;
   }
 }
 
@@ -756,6 +773,17 @@ select {
   .ripped-footer {
     margin-bottom: -5px;
     position: static;
+  }
+}
+
+@media (max-height: 650px) {
+  .ripped-footer {
+    position: relative;
+    margin-bottom: -5px;
+  }
+
+  .atbalstitaji {
+    height: auto;
   }
 }
 
@@ -845,7 +873,7 @@ footer > .bottom {
   .small-footer {
     display: block;
     padding: 40px 40px 20px;
-    height: 33vh;
+    height: auto;
 
   }
 

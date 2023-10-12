@@ -52,22 +52,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuButtonClosed = document.querySelector(".menu-closed");
   const menuButtonOpen = document.querySelector(".menu-open");
   const navBar = document.querySelector(".menu");
+  const photoContainerRippedTop = document.querySelector(".photo-container .ripped-top");
   const body = document.querySelector("body");
 
   menuButtonClosed.addEventListener("click", function () {
     navBar.classList.add("open");
     menuButtonClosed.style.display = "none";
     menuButtonOpen.style.display = "block";
-    body.classList.add("darken-background");
     body.style.overflow = "hidden";
+    if (window.innerWidth < 550) {
+      photoContainerRippedTop.style.display = "none";
+    }
   });
 
   menuButtonOpen.addEventListener("click", function () {
     navBar.classList.remove("open");
     menuButtonOpen.style.display = "none";
     menuButtonClosed.style.display = "block";
-    body.classList.remove("darken-background");
     body.style.overflow = "auto";
+    photoContainerRippedTop.style.display = "block";
   });
 
   window.addEventListener("resize", function () {
